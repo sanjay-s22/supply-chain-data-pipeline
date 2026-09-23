@@ -1,0 +1,12 @@
+version: 2
+
+sources:
+  - name: supply_chain
+    description: "Raw supply chain order-item data loaded into Snowflake."
+
+    database: SUPPLY_CHAIN_DW
+    schema: RAW
+
+    tables:
+      - name: SUPPLY_CHAIN_RAW
+        description: "Raw order-item level supply chain dataset containing customer, order, product, shipping, and sales attributes."

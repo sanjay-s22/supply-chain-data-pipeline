@@ -1,0 +1,5 @@
+pyspark==4.2.0
+pandas<3.0
+snowflake-connector-python==4.7.4
+dbt-core==1.12.5
+dbt-snowflake==1.12.1

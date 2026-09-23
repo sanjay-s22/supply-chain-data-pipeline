@@ -1,0 +1,23 @@
+name: 'dbt_supply_chain'
+version: '1.0.0'
+
+profile: 'dbt_supply_chain'
+
+model-paths: ["models"]
+analysis-paths: ["analyses"]
+test-paths: ["tests"]
+seed-paths: ["seeds"]
+macro-paths: ["macros"]
+snapshot-paths: ["snapshots"]
+
+clean-targets:
+  - "target"
+  - "dbt_packages"
+
+models:
+  dbt_supply_chain:
+    staging:
+      +materialized: view
+
+    marts:
+      +materialized: table

@@ -1,0 +1,32 @@
+version: 2
+
+models:
+  - name: fct_order_performance
+    description: "Order-level sales, shipping, and profitability metrics."
+
+    columns:
+      - name: order_id
+        description: "Unique identifier for an order."
+        data_tests:
+          - not_null
+          - unique
+
+      - name: customer_id
+        description: "Customer associated with the order."
+        data_tests:
+          - not_null
+
+      - name: order_date
+        description: "Date the order was placed."
+        data_tests:
+          - not_null
+
+      - name: total_sales
+        description: "Total sales value for the order."
+        data_tests:
+          - not_null
+
+      - name: total_profit
+        description: "Profit associated with the order."
+        data_tests:
+          - not_null
